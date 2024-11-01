@@ -1,5 +1,7 @@
 package ru.oop.task2;
 
+import java.awt.*;
+
 /**
  * <b>Задача 2:</b><br>
  * Добраться человеку до заданного места.<br>
@@ -28,5 +30,11 @@ public class MainTask2 {
      * @see Person
      * @see Position
      */
-    // TODO реализовать метод moveTo(...)
+    public void moveTo(Person person, Position destination, Transport transport) {
+        person.walk(transport.getPosition());
+        if(transport.canDriveTo(destination)) {transport.driveTo(destination);}
+        else {transport.driveToTheClosestPlace(destination);}
+        person.walk(destination);
+        assert person.getPosition() == destination;
+    }
 }
