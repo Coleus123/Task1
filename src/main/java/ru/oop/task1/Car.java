@@ -4,7 +4,13 @@ package ru.oop.task1;
  * Машина
  */
 public class Car {
-    public void Car(){};
+    /**
+     * Конструктор класса Car
+     * @param person
+     */
+    public Car(Person person) {
+    }
+
 
     /**
      * Проверяет можно ли добратья сразу же до места на машине

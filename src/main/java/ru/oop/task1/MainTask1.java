@@ -21,7 +21,7 @@ public class MainTask1 {
      * Переехать из текущего места в заданную точку
      */
     public void moveTo(Person person, Position destination) {
-        Car car = new Car();
+        Car car = new Car(person);
         if (car.canDriveTo(destination)){car.driveTo(destination);}
         else{
             car.driveToTheClosestPlace(destination);
