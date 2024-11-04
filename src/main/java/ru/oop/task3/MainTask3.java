@@ -27,16 +27,10 @@ public class MainTask3 {
      * @see Position
      */
     public void moveTo(Person person, Position destination, List<Transport> listOfTransports) {
-        ListOfTransports listOfTransportsCurrent = new ListOfTransports(listOfTransports);
-        listOfTransportsCurrent.rearrangeTransports(person);
-        for (int i = 0; i < listOfTransportsCurrent.quantity(); i++){
-            if (person.getPosition() != listOfTransportsCurrent.getTransport(i).getPosition()) {
-                person.walk(listOfTransportsCurrent.getTransport(i).getPosition());
-            }
-            listOfTransportsCurrent.getTransport(i).driveTo(destination);
+        for (int i = 0; i < listOfTransports.size(); i++){
+            person.walk(listOfTransports.get(i).getPosition());
+            listOfTransports.get(i).driveTo(destination);
         }
-        if (person.getPosition() != destination) {
-            person.walk(destination);
-        }
+        person.walk(destination);
     }
 }

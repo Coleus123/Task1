@@ -6,7 +6,7 @@ package ru.oop.task2;
 public interface Transport extends Positioned {
 
     /**
-     * Едет к указанному месту или к самому ближайшему расположению, указанного пункта назначения
+     * Едет к указанному месту или как можно ближе
      * @param position
      */
     void driveTo(Position position);

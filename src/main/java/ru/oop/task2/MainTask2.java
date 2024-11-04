@@ -31,12 +31,8 @@ public class MainTask2 {
      * @see Position
      */
     public void moveTo(Person person, Position destination, Transport transport) {
-        if(person.getPosition() != transport.getPosition()) {
-            person.walk(transport.getPosition());
-        }
+        person.walk(transport.getPosition());
         transport.driveTo(destination);
-        if(person.getPosition() != destination) {
-            person.walk(destination);
-        }
+        person.walk(destination);
     }
 }
