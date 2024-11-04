@@ -18,7 +18,7 @@ public class ListOfTransports {
      * Меняет порядок в котором расположены транспортные средства, чтобы
      * определить в какой последовательности нужно пересаживаться на другой транспорт
      */
-    public void rearrangeTransports(){
+    public void rearrangeTransports(Person person){
         //TODO
     }
 

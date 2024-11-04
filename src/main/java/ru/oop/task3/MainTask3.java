@@ -28,7 +28,7 @@ public class MainTask3 {
      */
     public void moveTo(Person person, Position destination, List<Transport> listOfTransports) {
         ListOfTransports listOfTransportsCurrent = new ListOfTransports(listOfTransports);
-        listOfTransportsCurrent.rearrangeTransports();
+        listOfTransportsCurrent.rearrangeTransports(person);
         for (int i = 0; i < listOfTransportsCurrent.quantity(); i++){
             if (person.getPosition() != listOfTransportsCurrent.getTransport(i).getPosition()) {
                 person.walk(listOfTransportsCurrent.getTransport(i).getPosition());
