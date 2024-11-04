@@ -1,25 +1,14 @@
 package ru.oop.task2;
 
 /**
- * Реализует различные виды транспорта
+ * Транспорт
  */
 public interface Transport extends Positioned {
-    /**
-     * Проверяет можно ли добраться сразу же до места на транспорте
-     * @param position
-     * @return
-     */
-    boolean canDriveTo(Position position);
 
     /**
-     * Едет к указанному месту
+     * Едет к указанному месту или к самому ближайшему расположению, указанного пункта назначения
      * @param position
      */
     void driveTo(Position position);
 
-    /**
-     * Едет как можно ближе к указанному месту
-     * @param position
-     */
-    void driveToTheClosestPlace(Position position);
 }

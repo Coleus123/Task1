@@ -17,9 +17,4 @@ interface Person extends Positioned {
      */
     void walk(Position destination);
 
-    /**
-     * Возвращает транспорт, который находится ближе всего к пользователю
-     * @param transports
-     */
-    Transport getClosestTransport(List<Transport> transports);
 }

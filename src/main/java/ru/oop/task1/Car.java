@@ -9,32 +9,15 @@ public class Car {
      * @param person
      */
     public Car(Person person) {
-    }
-
-
-    /**
-     * Проверяет можно ли добратья сразу же до места на машине
-     * @param position
-     * @return
-     */
-    public boolean canDriveTo(Position position) {
         //TODO
-        return true;
     }
 
     /**
-     * Едет к указанному месту
+     * Едет к указанному месту или к самому ближайшему расположению, указанного пункта назначения
      * @param position
      */
     public void driveTo(Position position) {
         //TODO
     }
 
-    /**
-     * Едет как можно ближе к указанному месту
-     * @param position
-     */
-    public void driveToTheClosestPlace(Position position) {
-        //TODO
-    }
 }
