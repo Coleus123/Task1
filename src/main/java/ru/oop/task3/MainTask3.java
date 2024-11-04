@@ -1,5 +1,7 @@
 package ru.oop.task3;
 
+import java.util.List;
+
 /**
  * <b>Задача 3:</b><br>
  * То же самое, что и задача 2, но добраться нужно с пересадками<br>
@@ -24,5 +26,11 @@ public class MainTask3 {
      * @see Person
      * @see Position
      */
-    // TODO реализовать метод moveTo(...)
+    public void moveTo(Person person, Position destination, List<Transport> listOfTransports) {
+        for (int i = 0; i < listOfTransports.size(); i++){
+            person.walk(listOfTransports.get(i).getPosition());
+            listOfTransports.get(i).driveTo(destination);
+        }
+        person.walk(destination);
+    }
 }
