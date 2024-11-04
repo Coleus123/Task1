@@ -34,9 +34,9 @@ public class MainTask3 {
                 person.walk(listOfTransportsCurrent.getTransport(i).getPosition());
             }
             listOfTransportsCurrent.getTransport(i).driveTo(destination);
-            if (i == listOfTransportsCurrent.quantity() - 1 && person.getPosition() != destination) {
-                person.walk(destination);
-            }
+        }
+        if (person.getPosition() != destination) {
+            person.walk(destination);
         }
     }
 }
